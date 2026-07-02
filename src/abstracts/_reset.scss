@@ -1,0 +1,29 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p,h1,h2,h3,span,button,label{
+    color: white;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #151515;
+    font-family:"Space Grotesk", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}

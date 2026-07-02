@@ -1,0 +1,595 @@
+@use "../abstracts" as abs;
+/*====================================*/
+/*           MOBILE-FIRST             */
+/*====================================*/
+.skills {
+  display: block;
+  padding: 2rem 1rem;
+  position: relative;
+}
+.skills::before,
+.skills::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: abs.$white;
+  margin: 3rem 1rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.skills-list {
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.skill h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.skill p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main-orbits {
+  position: absolute;
+  top: 80%;
+  left: 110%;
+  transform: translateX(-40%);
+  width: 34rem;
+  height: 5rem;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+}
+.main-orbits span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid abs.$grey;
+  opacity: 0.55;
+}
+.main-orbits span:nth-child(1) { transform: translateY(0rem) scaleX(1); }
+.main-orbits span:nth-child(2) { transform: translateY(0.65rem) scaleX(1); }
+.main-orbits span:nth-child(3) { transform: translateY(1.30rem) scaleX(1); }
+.main-orbits span:nth-child(4) { transform: translateY(1.95rem) scaleX(1); }
+.main-orbits span:nth-child(5) { transform: translateY(2.60rem) scaleX(1); }
+.projects-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "tittle contact";
+  position: relative;
+  padding: 0 2rem;
+}
+.projects-tittle {
+  display: flex;
+  grid-area: tittle;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.projects-header .highlight-name {
+  display: flex;
+  grid-area: contact;
+  padding-top: 1rem;
+  border-bottom: 0.1rem solid abs.$green;
+  padding-bottom: 0.3rem;
+}
+.project-card {
+  display: grid;
+  grid-template-areas:
+    "thumb"
+    "tittle"
+    "tech"
+    "links";
+  padding: 1rem 2rem; 
+}
+.project-thumb {
+  display: contents;
+}
+.project-thumb > img {
+  grid-area: thumb;
+  display: block;
+  width: 100%;
+  max-width: 19.56rem;
+  height: auto;
+}
+.project-thumb::after {
+  content: none;
+}
+.project-card h3 {
+  grid-area: tittle;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.project-card p {
+  grid-area: tech;
+  padding: 1rem 0;
+  word-spacing: 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.project-links {
+  grid-area: links;
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+.projects-grid .highlight-name {
+  display: inline-block;
+  position: relative;
+  border-bottom: 0.1rem solid abs.$green;
+  padding-bottom: 0.4rem;
+  letter-spacing: 0.14rem;
+  max-width: 9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
+
+
+
+/*====================================*/
+/*           Versión IPAD             */
+/*====================================*/
+@media (min-width: 48rem) {
+  .skills {
+    display: block;
+    padding: 1rem;
+    position: relative;
+  }
+  .skills::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: abs.$white;
+    margin: 0rem 1rem;
+  }
+
+  .skills::after {
+    content: none;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "html css"
+      "js access"
+      "react sass";
+    column-gap: 3.5rem;
+    padding: 3rem 1rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .skill h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .skill p {
+    font-size: 1.125rem;
+    padding-top: 1rem;
+  }
+
+  .skills-list .skill:nth-child(1) { grid-area: html; }
+  .skills-list .skill:nth-child(2) { grid-area: css; }
+  .skills-list .skill:nth-child(3) { grid-area: js; }
+  .skills-list .skill:nth-child(4) { grid-area: access; }
+  .skills-list .skill:nth-child(5) { grid-area: react; }
+  .skills-list .skill:nth-child(6) { grid-area: sass; }
+
+  .main-orbits {
+    position: absolute;
+    top: 76%;
+    left: 110%;
+    transform: translateX(-50%);
+    width: 34rem;
+    height: 5rem;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.45;
+  }
+
+  .main-orbits span {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid abs.$grey;
+    opacity: 0.55;
+  }
+
+  .main-orbits span:nth-child(1) { transform: translateY(0rem) scaleX(1); }
+  .main-orbits span:nth-child(2) { transform: translateY(0.65rem) scaleX(1); }
+  .main-orbits span:nth-child(3) { transform: translateY(1.30rem) scaleX(1); }
+  .main-orbits span:nth-child(4) { transform: translateY(1.95rem) scaleX(1); }
+  .main-orbits span:nth-child(5) { transform: translateY(2.60rem) scaleX(1); }
+
+  .projects{
+width: min(69.375rem, calc(100% - 4rem)); /* 1110px, con padding lateral */
+    margin-inline: auto;
+    padding: 2rem 0;
+  }
+
+  /* Header */
+  .projects-header{
+    margin: 0 auto 2.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .projects-header,
+  .projects-grid {
+    width: min(45rem, 100%); /* 1.5rem izq + 1.5rem der */
+    margin-inline: auto;
+  }
+
+  .projects-tittle{
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .projects-header .btn-contact {
+    position: relative;
+    top:-1.5rem
+  }
+
+  .projects-header .btn-contact .highlight-name{
+    padding-bottom: .5rem;
+    border-bottom: .15rem solid abs.$green;
+    letter-spacing: .2rem;
+  }
+
+  /* Grid fijo como Figma */
+  .projects-grid{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 21.6rem); 
+    column-gap: 1.5rem;
+    justify-content: space-between;
+
+  }
+
+  .project-card{
+    width: 22rem;
+    padding: 0;              
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+      "thumb"
+      "tittle"
+      "tech"
+      "links";
+  }
+
+  .project-thumb{
+    display: contents;          
+    position: relative;
+    padding:0;
+  }
+
+  .project-thumb > img{
+    grid-area: thumb;
+    display: block;
+    width: 100%;
+    transform: scaleX(0.97);      
+    transform-origin: left center;       
+    max-width: none;    
+    height: auto;
+    margin: 0; 
+  }
+
+  .project-thumb::after{
+    content: none;
+  }
+
+  .project-card h3{
+    grid-area: tittle;
+    margin: .25rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .project-card p{
+    grid-area: tech;
+    margin: 0;
+    font-size: 1.125rem;
+    word-spacing: 1rem;
+  }
+
+  /* Links debajo */
+  .project-links{
+    grid-area: links;
+    margin-top: 1rem;
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    gap: 2rem;
+    padding-bottom:3rem;
+  }
+
+  .projects-grid .highlight-name{
+    display: inline-block;
+    border-bottom: .1rem solid abs.$green;
+    padding-bottom: .4rem;
+    letter-spacing: .14rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+  }
+}
+
+
+
+
+/*====================================*/
+/*           Versión DESKTOP          */
+/*====================================*/
+@media (min-width: 90rem) {
+
+  /* ===== SKILLS (SIN CAMBIOS FUNCIONALES) ===== */
+  .skills {
+    display: block;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .skills::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: abs.$white;
+    margin: 0;
+  }
+
+  .sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "html css js"
+      "access react sass";
+    gap: 4rem;
+    padding: 4rem 1rem;
+    margin: 0;
+  }
+
+  .skill h2{
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .skill p{
+    font-size: 1.125rem;
+    padding-top: 1rem;
+  }
+
+  .skills-list .skill:nth-child(1) { grid-area: html; }
+  .skills-list .skill:nth-child(2) { grid-area: css; }
+  .skills-list .skill:nth-child(3) { grid-area: js; }
+  .skills-list .skill:nth-child(4) { grid-area: access; }
+  .skills-list .skill:nth-child(5) { grid-area: react; }
+  .skills-list .skill:nth-child(6) { grid-area: sass; }
+
+  .main-orbits{
+    position: absolute;
+    top: 63%;
+    left: 109%;
+    transform: translateX(-40%);
+    width: 34rem;
+    height: 5rem;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .45;
+  }
+
+  .main-orbits span{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid abs.$grey;
+    opacity: .55;
+  }
+
+  .main-orbits span:nth-child(1){ transform: translateY(0rem) scaleX(1); }
+  .main-orbits span:nth-child(2){ transform: translateY(.65rem) scaleX(1); }
+  .main-orbits span:nth-child(3){ transform: translateY(1.30rem) scaleX(1); }
+  .main-orbits span:nth-child(4){ transform: translateY(1.95rem) scaleX(1); }
+  .main-orbits span:nth-child(5){ transform: translateY(2.60rem) scaleX(1); }
+
+  /* ===== PROJECTS ===== */
+  .projects{
+    width: min(69.375rem, calc(100% - 4rem)); /* 1110px */
+    margin-inline: auto;
+    padding: 2rem 0;
+  }
+
+  /* header */
+  .projects-header{
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 4rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .projects-header .btn-contact{
+    margin-left: auto;
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  .projects-tittle{
+    margin: 0;
+    font-size: 5.5rem;
+    font-weight: 700;
+  }
+
+  .projects-header .highlight-name{
+    display: inline-block;
+    border-bottom: .12rem solid abs.$green;
+    padding-bottom: .35rem;
+    letter-spacing: .14rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  /* grid */
+  .projects-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.875rem; /* 30px */
+    row-gap: 4.5rem;
+    padding: 0;
+    justify-items: stretch; /* asegura que cada card estire */
+  }
+
+  .project-card{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* IMPORTANTE: en mobile/ipad usaste display: contents; aquí lo anulamos */
+  .project-thumb{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* IMPORTANTE: mismo selector que iPad para machacar el transform */
+  .project-thumb > img{
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: none;          /* <-- quita el scaleX(0.97) heredado */
+    transform-origin: initial;
+  }
+
+  .project-card h3{
+    margin: 1.25rem 0 .5rem;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .project-card p{
+    margin: 0 0 1.25rem;
+    padding: 0;
+    font-size: 1.125rem;
+    word-spacing: 1rem;
+  }
+
+  /* overlay hover */
+  .project-thumb::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .project-links{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 2;
+  }
+
+  .project-thumb:hover::after,
+  .project-thumb:focus-within::after{
+    opacity: 1;
+  }
+
+  .project-thumb:hover .project-links,
+  .project-thumb:focus-within .project-links{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .project-links a{
+    text-decoration: none;
+    color: abs.$white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .14rem;
+  }
+
+  .project-links a .highlight-name{
+    display: inline-block;
+    padding-bottom: .4rem;
+    border-bottom: .1rem solid abs.$green;
+    color: currentColor;
+  }
+
+  .project-links a:hover,
+  .project-links a:focus-visible{
+    color: abs.$green;
+    outline: none;
+  }
+}
