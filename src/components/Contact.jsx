@@ -17,7 +17,7 @@ function Contact() {
           <div className="form-field">
             <label htmlFor="email">EMAIL</label>
             <input type="email" id="email" name="email" autoComplete="email" required pattern="^[A-Za-z0-9._%+-]+@gmail\.com$" placeholder=" "/>
-            <p class="error-msg">Sorry, invalid format here</p>
+            <p className="error-msg">Sorry, invalid format here</p>
           </div>
 
           <div className="form-field">

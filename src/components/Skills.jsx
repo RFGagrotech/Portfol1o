@@ -1,5 +1,4 @@
 
-
 function Skills() {
     return(
         <section className="skills" aria-label="Technologies">

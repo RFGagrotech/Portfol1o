@@ -7,19 +7,30 @@
 }
 .page-home .logo {
   display: flex;
-  font-size: 1.5rem;
   justify-content: center;
   padding-top: 1.13rem;
+  font-size: 1.8rem;
 }
+
+.page-home .header-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 0;
+  margin-top: 0.8rem;
+}
+
 .page-home nav {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   padding-top: 1rem;
 }
+
 .page-home nav a {
   display: inline-flex;
 }
+
 .header-picture {
   display: flex;
   justify-content: center;
@@ -27,6 +38,7 @@
   position: relative;  
   z-index: 2;          
 }
+
 .header-picture::before {
   content: "";
   position: absolute;
@@ -44,10 +56,12 @@
   border-radius: 0.25rem; 
   z-index: -1;            
 }
+
 .header-picture img {
   padding-top: 2rem;
   display: block;
 }
+
 .header-text {
   justify-content: center;
   text-align: center;

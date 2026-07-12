@@ -26,8 +26,8 @@ function Projects() {
            srcSet={`${img1} 1x, ${img2} 2x`}
            alt="Design portfolio"/>
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>DESIGN PORTFOLIO</h3>
@@ -40,8 +40,8 @@ function Projects() {
            srcSet={`${img3} 1x, ${img4} 2x`}
            alt="e-learning landing page"/>
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>E-LEARNING LANDING PAGE</h3>
@@ -54,8 +54,8 @@ function Projects() {
            srcSet={`${img5} 1x, ${img6} 2x`}
            alt="todo web app"/>
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>TODO WEB APP</h3>
@@ -68,8 +68,8 @@ function Projects() {
            srcSet= {`${img7} 1x,${img8} 2x`}
            alt="entertainment web app"/>
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>ENTERTAINMENT WEB APP</h3>
@@ -82,8 +82,8 @@ function Projects() {
            srcSet={`${img9} 1x, ${img10} 2x`}
            alt="memory game"/>
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>MEMORY GAME</h3>
@@ -97,8 +97,8 @@ function Projects() {
            alt="art gallery showcase"/>
 
       <div className="project-links">
-        <a href="#"><span class="highlight-name">VIEW PROJECT</span></a>
-        <a href="#"><span class="highlight-name">VIEW CODE</span></a>
+        <a href="#"><span className="highlight-name">VIEW PROJECT</span></a>
+        <a href="#"><span className="highlight-name">VIEW CODE</span></a>
       </div>
     </div>
     <h3>ART GALLERY SHOWCASE</h3>
